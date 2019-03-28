@@ -48,10 +48,10 @@ Have you heard anything from Yuko since earlier?[p]
 #Me
 Nothing, I'll send a text and maybe call in a bit if she doesn't show up to club.[p]
 #
-We walk the rest of way to club talking idly about Lin's book.[p]
+We walk the rest of the way to club talking idly about Lin's book.[p]
 [_tb_end_text]
 
-[jump  storage="ClubDay1.ks"  target=""  ]
+[jump  storage="ClubDay1.ks"  target="*ClubAfterClass"  ]
 [s  ]
 *Choice
 

@@ -1,2 +1,6 @@
 [preload  storage="./data/bgimage/school08_evening_by_Douglas_P_Perkins.jpg"  ]
+[preload  storage="./data/fgimage/chara/1/Pout1.png"  ]
+[preload  storage="./data/fgimage/chara/1/smile5.png"  ]
+[preload  storage="./data/bgimage/school01_night_dark.jpg"  ]
+[preload  storage="./data/bgimage/room_living04_night_light_by_AMagill.jpg"  ]
 [return]

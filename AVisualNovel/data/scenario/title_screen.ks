@@ -1,54 +1,29 @@
-
-;==============================
-; タイトル画面
-;==============================
+[_tb_system_call storage=system/_title_screen.ks]
 
 [hidemenubutton]
 
 [tb_clear_images]
 
-[tb_keyconfig flag=0]
+[tb_keyconfig  flag="0"  ]
+[tb_hide_message_window  ]
+[bg  storage="YMA_Main_Menu.png"  ]
+*title
 
+[glink  color="black"  text="New&nbsp;Game"  x="668"  y="262"  size="24"  target="*start"  width=""  height=""  _clickable_img=""  ]
+[glink  color="black"  text="Load&nbsp;Game"  x="664"  y="317"  size="24"  target="*load"  width=""  height=""  _clickable_img=""  ]
+[s  ]
+*start
 
-	;標準のメッセージレイヤを非表示
-	[tb_hide_message_window]
+[showmenubutton]
 
-	;タイトル表示
-	[bg storage ="title.jpg"]
+[cm  ]
+[tb_keyconfig  flag="1"  ]
+[jump  storage="scene1.ks"  target=""  ]
+[s  ]
+*load
 
-	*title
+[cm  ]
+[showload]
 
-	
-
-	;タイトル各種ボタン
-	[glink color="black" text="New&nbsp;Game" x=600 y=370 size=24 target="*start"]
-	[glink color="black" text="Load&nbsp;Game" x=600 y=470 size=24 target="*load"]
-
-	
-
-	[s]
-
-	;-------ボタンが押されたときの処理
-
-	*start
-
-	
-	[showmenubutton]
-	
-
-	[cm]
-	[tb_keyconfig flag=1]
-
-	@jump storage="scene1.ks"
-	[s]
-
-	;--------ロードが押された時の処理
-	*load
-
-	[cm]
-	[showload]
-	[jump target=*title]
-
-	[s]
-
-
+[jump  target="*title"  storage=""  ]
+[s  ]

@@ -5,7 +5,7 @@
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 It was a normal afternoon like any other.[p]
-I just finished eating lunch and was feeling pretty sleepy.[p]
+I just finished eating lunch and was starting to feel pretty sleepy.[p]
 Just as I was about to drift to sleep, a sudden voice interrupted me.[p]
 #?
 Hey, wake up![p]
@@ -13,14 +13,14 @@ Hey, wake up![p]
 Huh?![p]
 [_tb_end_text]
 
-[chara_show  name="Yuko"  time="1000"  wait="true"  storage="chara/1/smile2.png"  width="276"  height="848"  left="341"  top="104"  reflect="false"  ]
+[chara_show  name="Yuko"  time="1000"  wait="true"  storage="chara/1/smile2.png"  width="276"  height="848"  left="335"  top="88"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #Me
 Yuko?! What was that for?![p]
 #Yuko
 There's no time to explain! Come with me![p]
 #
-Yuko grabs me by the arm and drags me out into the hallway.[p]
+Yuko grabs me by the arm and drags me out into the hall and starts leading down toward the entrance.[p]
 #Me
 Whoa! Wait a minute Yuko![p]
 [_tb_end_text]
@@ -43,7 +43,7 @@ We have class in 5 minutes, I don't have time for this![p]
 
 [tb_start_text mode=1 ]
 #Me
-I'm headed back to class, I don't have time for this![p]
+I'm headed back to class, I can't miss another day![p]
 #Yuko
 No, wait![p]
 #
@@ -55,26 +55,25 @@ I turn around and close the door to the classroom behind me.[p]
 [s  ]
 *WhatIsIt
 
-[tb_eval  exp="f.AskedYuko=1"  name="AskedYuko"  cmd="="  op="t"  val="1"  val_2="undefined"  ]
 [tb_start_text mode=1 ]
 #Me
-I don't have much time, what is it?[p]
+I have Astronomy in a minute, so explain it quick.[p]
 #Yuko
-Last night I saw a meteor land up in the mountain just behind school, we have to go check it out![p]
+Last night I spotted where a meteor landed on the mountain, we have to go check it out![p]
 [_tb_end_text]
 
-[glink  color="black"  storage="scene1.ks"  size="20"  text="Do&nbsp;you&nbsp;expect&nbsp;me&nbsp;to&nbsp;believe&nbsp;that?&nbsp;I'm&nbsp;headed&nbsp;back&nbsp;to&nbsp;class."  x="182"  y="212"  width=""  height=""  _clickable_img=""  target="*BackToClassV2"  ]
-[glink  color="black"  storage="scene1.ks"  size="20"  text="Huh?&nbsp;A&nbsp;meteorite?&nbsp;We&nbsp;gotta&nbsp;check&nbsp;that&nbsp;out!"  x="249"  y="264"  width=""  height=""  _clickable_img=""  target="*MeteoritesAreCoolerThanClass"  ]
+[glink  color="black"  storage="scene1.ks"  size="20"  text="While&nbsp;that's&nbsp;cool,&nbsp;it'll&nbsp;be&nbsp;there&nbsp;after&nbsp;class"  x="262"  y="212"  width=""  height=""  _clickable_img=""  target="*BackToClassV2"  ]
+[glink  color="black"  storage="scene1.ks"  size="20"  text="A&nbsp;meteor?&nbsp;Hmm...&nbsp;Gotta&nbsp;see&nbsp;it..."  x="291"  y="256"  width=""  height=""  _clickable_img=""  target="*MeteoritesAreCoolerThanClass"  ]
 [s  ]
 *BackToClassV2
 
 [tb_start_text mode=1 ]
 #Me
-Do you expect me to believe that? I'm headed back to class.[p]
+While that's cool, it will still be there after class. I really can't miss another class for this today.[p]
 #Yuko
-No wait, come back![p]
+All right... I'll see you later then.[p]
 #
-I turn back towards the classroom and close the door behind me.[p]
+I turn back towards the class and close the door behind me.[p]
 [_tb_end_text]
 
 [chara_hide  name="Yuko"  time="1000"  wait="true"  pos_mode="true"  ]
@@ -84,21 +83,21 @@ I turn back towards the classroom and close the door behind me.[p]
 
 [tb_start_text mode=1 ]
 #Me
-Huh? A meteor? We gotta check that out![p]
-Where did you say it fell?[p]
+Really? You saw where the meteor landed? While the teacher will probably be angry with me... [p]
+Where on the mountain did it land?[p]
 #Yuko
-I already said, on the mountain just behind the library! C'mon, let's go![p]
+It landed somewhere around the third rest station. come on, let's go![p]
 [_tb_end_text]
 
 [chara_hide  name="Yuko"  time="1000"  wait="true"  pos_mode="true"  ]
-[jump  storage="Mountain.ks"  target=""  ]
+[jump  storage="Mountain.ks"  target="*Start"  ]
 [s  ]
 *InClass
 
 [bg  time="1000"  method="crossfade"  storage="school02_day_by_fukapon.jpg"  ]
 [tb_start_text mode=1 ]
 #
-As I return to my seat a familiar face approaches me.[p]
+As I return to my seat afamiliar face approaches me.[p]
 [_tb_end_text]
 
 [chara_show  name="Lin"  time="1000"  wait="true"  storage="chara/2/MS4-default.png"  width="230"  height="791"  left="330"  top="96"  reflect="false"  ]
@@ -106,11 +105,17 @@ As I return to my seat a familiar face approaches me.[p]
 #?
 What was all that about?[p]
 #Me
-Oh, hey Lin, I don't know, Yuko was trying to drag me off somewhere again. I can't miss another class though...[p]
-#Lin
-Yeah, I've noticed that you've missed a few classes thanks to Yuko, I doubt you'd get off lightly for cutting class again.[p]
+Oh, hey Lin.[p]
+#
+That's Lin. He's been a close friend since my first semester at this school.[p]
 #Me
-Tell me about it... Feels like she doesn't realize just how important attendance is for our grades...[p]
+I'm not really sure... Yuko was going to drag me off somewhere again, but I can't miss anymore of this class though...[p]
+#Lin
+Yeah, you've missed enough classes thanks to Yuko, I doubt you'd be able to catch up if you missed another class.[p]
+#
+I let out a long sigh[p]
+#Me
+I feel like Yuko doesn't understand just how important these classes are for me...[p]
 [_tb_end_text]
 
 [chara_mod  name="Lin"  time="600"  cross="true"  storage="chara/2/MS4-frown1.png"  ]
@@ -118,18 +123,18 @@ Tell me about it... Feels like she doesn't realize just how important attendance
 #Lin
 And have you tried explaining this to her?[p]
 #Me
-No, though I doubt that any amount of explaining would get through that head of hers.[p]
+No... Though I doubt explaining it will get across how important it is.[p]
 [_tb_end_text]
 
 [chara_mod  name="Lin"  time="600"  cross="true"  storage="chara/2/MS4-smile1.png"  ]
 [tb_start_text mode=1 ]
 #Lin
-While you're probably right, you should still try.[p]
-It also might help keep her out of trouble if you could convince her to stop skipping class too.[p]
+You're probably right, but you should still try.[p]
+It might help keep her out of trouble if you could convince her to stop skipping class too.[p]
 #Me
-*sigh* I suppose it wouldn't hurt to try.[p]
+I suppose it wouldn't hurt to try.[p]
 #
-As we are chatting the way, our teacher walks in and starts setting up for class.[p]
+As we are chatting, our teacher walks in and starts setting up for class.[p]
 We break off our conversation as well and get ready for the class.[p]
 [_tb_end_text]
 
@@ -140,28 +145,30 @@ We break off our conversation as well and get ready for the class.[p]
 
 [bg  time="1000"  method="crossfade"  storage="school02_day_by_fukapon.jpg"  ]
 [tb_start_text mode=1 ]
-#
-As I return to my seat a familiar face approaches me.[p]
+As I return to my seat and sit down, a familiar face approaches me at my seat.[p]
 [_tb_end_text]
 
 [chara_show  name="Lin"  time="1000"  wait="true"  storage="chara/2/MS4-default.png"  width="230"  height="791"  left="331"  top="93"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #?
-What was all that about?[p]
+What was with all the commotion?[p]
 #Me
-Oh, hey Lin. Yuko was trying to get me to go with her to look for a meteor that apparently fell near the school.[p]
+Oh, hey Lin.[p]
+#
+Lin had been a friend since my first semester here, and we'd gotten pretty close over time. [p]
+#Me
+Yuko spotted where a meteor had touched down last night, and wanted me to come with to check it out.[p]
 #Lin
 A meteor? Really?[p]
-I know that Yuko loves exploring out there, but I'm not sure she's going to find any meteorites around here...[p]
+I know that Yuko loves making discoveries, but I find it unlikely that she would see a meteor around these parts...[p]
 #Me
-I didn't think so either, and I figured it wasn't worth missing class again for something that unlikely.[p]
-And I didn't want a repeat of the time she had me wandering around the woods for 6 hours looking for an eagle she thought she saw.[p]
+Eh, it's more likely than you might think, but I figured it wasn't worth skipping out on class again for something that unlikely.[p]
 #Lin
-Smart move if you ask me.[p]
-You've missed enough classes as is, you should probably be worrying about your attendance grade.[p]
+A smart move if you ask me.[p]
+You miss enough classes cause of Yuko dragging you off anyways, you should really be worrying about keeping your grades up, especially your attendance.[p]
 #
-Right then, the teacher walked in and started setting up for class.[p]
-We quickly broke off and got ready for class ourselves.[p]
+With that, the teacher walked in and started getting ready to start the lecture.[p]
+We quickly broke off our conversation and got ready for class ourselves.[p]
 [_tb_end_text]
 
 [chara_hide  name="Lin"  time="1000"  wait="true"  pos_mode="true"  ]
